@@ -1,13 +1,16 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
+import { ProductsProvider } from './context/products_context'
+import { FilterProvider } from './context/filter_context'
+import { CartProvider } from './context/cart_context'
+import { UserProvider } from './context/user_context'
+import { Auth0Provider } from '@auth0/auth0-react'
 
-window.onload= function(){
-    const takeElement = document.getElementById("main");
-    takeElement.style.color='red'
+ReactDOM.render(
+    <ProductsProvider>
+        <App />
+    </ProductsProvider>
 
-    const buttons= document.querySelectorAll("button")
-    buttons.forEach(eachButton=>{
-        eachButton.addEventListener("click",e=>{
-            console.log(e.target.innerHTML)
-        })
-    })
-}
-
+, document.getElementById('root'))
