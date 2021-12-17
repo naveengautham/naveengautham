@@ -1,0 +1,620 @@
+ui developer:
+
+
+Difference between HTML and HTML5.
+Difference between CSS and CSS3.
+Difference between position relative, absolute, fixed and static.
+Difference between display inline,inline-block and block.
+
+
+
+What is Dependency Injection?
+What are web packs?
+What is Prototype Object?
+What is the difference between onload and onloadstart?
+How do you optimize a website’s assets?
+What are three ways to reduce page load time?
+What are the limitations when serving XHTML pages?
+What is the difference between linking to an image, a website, and an email address?
+What are web packs?
+What’s the difference between standards mode and quirks mode?
+What kind of things must you be wary of when the design or developing for multilingual sites?
+
+
+
+
+Hi! I am naveen. I am from chennai and have completed my Bachelor of Engineering degree in 2018 from srm valliammai college.
+
+I have been associated with my current company for the last 2.5 years, 
+During my  years  of experience as a developer,i have been working as a front-end developer with 9 months of experience to build all aspects of 
+user experience and user interfaces for client landing pages.Also i have been working as a react developer with 1.9+ years of experience to build 
+dashboard sites.
+ 
+Regarding my project,i have worked in dashboard creation ,were responsible for developing and maintaining our webpage application in react
+Will be creating the dashboard charts and displaying the user story details in components,,by creating components We used Redux to manage the application
+ state and for that
+we will use the actions,api,reducer,saga and components in react,and combine it into the redux store to run the applications.
+65
+And for the ui perspective, before creating the dashboard , we will send the mock data response to the backend team to create,
+once we got the backend dynamic api url, we will integrate it into our ui API call.And finally based on te response we will change the props if it incorrects,
+and will change the series of our chart components,options and state as dynamically.
+
+we just build the dashboard sites based on client requirements,till now we have developed 4 sites that is DE dashboard ,sfdc dashboard,msd teams and ods team,
+right now we were working in ods dashboard and remaining three dashboards we have buikd and deployed it to the concerned team depends on their 
+requirement like displaying the user stories based on spirint they worked ,how much effort they have spent ,defect total and defect summary details.
+and  in sfdc dashboard we were just showcasing the charts based on filter like storypoints,teamname and iteration list.And each chart components we have an
+api call ,actions, reducer and saga.
+
+first we write it down the action statement and each action statement have type and payload and action type describes what change we want to make our data and
+ payload is the key value pairs and passed around between the reducers and saga in our redux application,and then we insert our action statement in our saga 
+ generator function,and inside our saga generatorfunction we have an takeevery saga helper ,as with takeevery Generator function pauses until an action fires 
+ and suppose any action fires its going to call the function
+secondly we fetch the data through axios in our api and then we call that api in saga through yield call and then if the api call success it will go to the 
+action payload and then we store the data in one variable and we call that variable in reducer to update the state using spread operator.
+ 
+ Normally Reducers are functions that take the current state (current state is nothing but the initial state, initial state we just send an empty array)
+ and an action as arguments, and it will return a new state result(new state means we get the new state from saga).
+ All reducers of a react app are combined into one single reducer which is passed as an argument to the redux store.
+The redux store is provided to the react app in the root component.The Provider is a component that has a reference to the Store and provides the data
+from the Store to the component it wraps.Connect is a function communicates with the Provider. Whatever component we wrap with Connect, 
+that component will be able to get changes in the Store state from the Provider.
+
+
+Saga middleware:
+
+In order to run our Saga, we need to:
+ 
+create a Saga middleware using the factory function createSagaMiddleware exported by the redux-saga library.with a list of Sagas to run and second thing 
+we need to connect the Saga middleware to the Redux store using applyMiddleware.
+Then we can use the sagaMiddleware.run(helloSaga) to start our Saga.
+
+FORK:
+
+If we have multiple Sagas watching for different actions, we can create multiple watchers with those built-in helpers, which will behave like 
+there was fork used to combine them.
+
+We would generally also have meetings planning development sprints and on feature development to improve for the next sprint.
+
+10. What are the limitations of React?
+React Technology accelerates so fast so that it cannot make proper documentation of the project.
+So, the developer tries to write the instruction on its own. React focus on the view part of MVC i.e. UI of the web application.
+ 
+ 14. How is React different from Angular?
+Angular JS is a structural framework for developing dynamic web apps, whereas React is a JavaScript library that allows you to build UI components.
+Angular JS is based on MVC (Model View Controller) whereas React is based on Virtual DOM. Angular is based on Typescript and React is based on JavaScript.
+
+What Does Single Page Application Mean and Why Do We Need Single Page Application
+A single-page application is an app that doesn’t need to reload the page during its use and works within a browser. 
+
+Think of the apps you use daily: Facebook, Google Maps, Gmail, Twitter, Google Drive, or even GitHub. All these are examples of a SPA.
+
+DATA Binding:
+
+aIn ReactJS, components are rendered to the user interface and the component’s logic contains the data to be displayed in the view(UI). 
+The connection between the data to be displayed in the view and the component’s logic is called data binding in ReactJS.
+
+One-way Data Binding: ReactJS uses one-way data binding. In one-way data binding one of the following conditions can be followed:
+
+Component to View: Any change in component data would get reflected in the view.
+View to Component: Any change in View would get reflected in the component’s data.
+
+bind: 
+bind is slightly different from call and apply , rather than immediately invoking the function it actually creates and returns a new function. 
+The new function has the specified this value bound to it.
+
+// program to check if a string contains a substring
+
+// take input
+const str = prompt('Enter a string:');
+const checkString = prompt('Enter a string that you want to check:');
+
+// check if string contains a substring
+if(str.indexOf(checkString) !== -1) {
+    console.log(`The string contains ${checkString}`);
+} else {
+    console.log(`The string does not contain ${checkString}`);
+}
+
+const str =' jggj  k ';
+const result=str.trim();
+console.log(result)
+
+// program to replace all occurrence of a string
+ 
+const string = 'Mr red has a red house and a red car';
+
+const result = string.split('red').join('blue');
+
+console.log(result);
+
+
+// program to replace all line breaks in a string with <br>
+const string = `I am Learning JavaScript.
+JavaScript is fun.
+JavaScript is easy.`;
+
+const result = string.split('\n').join('');
+
+console.log(result);
+
+
+
+callback functions:
+
+ The callback  function is helpful when you have to wait for a result that takes time. For example, the data coming from a server because it takes 
+ time for data to arrive.
+
+The benefit of using a callback function is that you can wait for the result of a previous function call and then execute another function call.
+
+In JavaScript, you can also pass a function as an argument to a function. This function that is passed as an argument inside of another function 
+is called a callback function. 
+
+It is unnecessary to bind ‘this’ inside the constructor when using an arrow function. This prevents bugs caused by the use of ‘this’ in React callbacks.
+
+//  program that shows the delay in execution
+
+function greet() {
+    console.log('Hello world');
+}
+
+function sayName(name) {
+    console.log('Hello' + ' ' + name);
+}
+
+// calling the function
+setTimeout(greet, 2000);
+sayName('John');
+
+Output
+
+Hello John
+Hello world
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ React js has nothing to do with db. Theoritically React is only reducing the distance between html and javascript. We can write a view component without
+ bothering about slection of elements from the html dom and how it manipulated (in angular or jquery we need to bother about those).
+ For Model and controller parts we can use another frameworks such as backbone or redux, many others can be used, just mentioned only whichever i have used.
+
+React developer will be creating the interactive part of web, by creating components which can send and recieve data from a backend server.
+ He will be responsible for the rendering of components which is having customised requirements. for example he may need to create a button 
+ which can show a spinner inside it on sending a http request and will turn to back to a normal button on success/error
+ of the request, it is very simple part of the task that a dev may get.
+ 
+ 
+ 
+ 
+ 
+ 
+I was working with React, we were responsible for developing and maintaining our webpage application front end.Will be creating the dashboard
+ apex charts by creating components which can send and recieve data values from the backend server.We used Redux to manage application 
+ state and functional libraries to make API calls and derive data from state. Then we would present the information using React components.And it will be 
+ responsible for rendering of components which is required.
+ 
+ 
+ 
+ 
+This involved implementing the UI for features. We had a UX designer mock up wireframes of the UI and we would implement them as components.
+
+Doing so usually involved designing the front end application’s data layer and presentational layer. We used Redux to manage application state and functional 
+libraries to make asynchronous API calls and derive computed data from state. Then we would present the information using React components.
+
+Ideally you would put time into designing reusable components to speed up future development, this proves much better in the long run than writing components 
+specific for the UI, but the latter is faster in the short run. Sometimes you just need to get a working feature done for a client.
+
+We would also go through QA process where engineers and the designers would test the features and design would suggest style changes to make the implemented 
+components visually appealing.
+
+Of course, there are always bugs to fix. Though front end bugs, as long as they are reproducible, were more straightforward than some of our back end bugs,
+ but that is my opinion.
+
+We would generally also have meetings planning development sprints and do retrospectives on feature development to try to improve for the next sprint.
+
+1) How do you optimize a website’s assets?
+File concatenation, file compression, CDN Hosting, offloading assets, re-organizing and refining code, etc. Have a few ready.
+
+2) What are the three ways to reduce page load time?
+Reduce image sizes, remove unnecessary widgets, HTTP compression, put CSS at the top and script references at the bottom or in external files, 
+reduce lookups, minimize redirects, caching, etc.
+
+3) What kind of things must you be wary of when the design or developing multilingual sites?
+setting the default language, using Unicode encoding, using the ‘lang’ attribute, being aware of standard font sizes and text direction, 
+and language word length (may affect layout).
+
+4) What is HTML?
+HTML stands for HyperText Markup Language. It is the dominant markup language for creating websites and anything that can be viewed in a web browser. If you want to get some extra bonus points, you can learn the HISTORY OF HTML and throw in some obscure facts.
+
+5) What is the difference between HTML elements and tags?
+HTML elements communicate to the browser how to render text. When surrounded by angular brackets <> they form HTML tags. 
+For the most part, tags come in pairs and surround the text.
+
+6) What is “Semantic HTML"?
+Semantic HTML is a coding style where the tags embody what the text is meant to convey. In Semantic HTML, tags like for bold, and for italic
+ should not be used, the reason being they just represent formatting and provide no indication of meaning or structure. 
+ The semantically correct thing to do is use these tags will have the same bold and italic effects while demonstrating meaning and structure 
+ (emphasis in this case).
+
+7) What does DOCTYPE mean?
+The term DOCTYPE tells the browser which type of HTML is used on a webpage. In turn, the browsers use DOCTYPE to determine how to render a page.
+ Failing to use DOCTYPE or using the wrong DOCTYPE may load your page in Quirks Mode.
+
+8) What’s the difference between standards mode and quirks mode?
+quirks mode is just to support those old websites that were written before the world wide web came and before HTML5 was invented,
+ in "standards mode" pages are rendered according to the HTML and CSS specifications,
+
+9)What are the limitations when serving XHTML pages?
+Perhaps the biggest issue is the poor browser support XHTML currently enjoys. Internet Explorer and a number of other user agents cannot parse XHTML as XML. 
+Thus, it is not the extensible language it was promised to be.
+
+10) How do you make comments without text being picked up by the browser?
+Comments are used to explain and clarify code or to prevent code from being recognized by the browser. Comments start with “*” and end with ” –>“.
+
+11)What is the difference between linking to an image, a website, and an email address?
+To link an image use < img> tags. You need specify the image in quotes using the source attribute, src in the opening tag.
+
+For hyperlinking, the anchor tag, < a> , is used and the link is specified in the href attribute.
+ Text to be hyperlinked should be placed between the anchor tags. Little known fact: href stands for “hypertext reference.”
+
+examples
+
+< img src=”HTMLrocks.jpg”> < /img>
+
+< a href=”Questions and Answers”> All India Exams< /a>
+
+< a href=”admin@allindiaexams.in”> Email Me< /a>
+
+12)My hyperlink or image is not displaying correctly, what is wrong with it?
+It could be any number of things, but the most common mistakes are leaving out a tag bracket or quote missing for href, src, or alt text may be the issue. 
+You should also verify the link itself.
+
+13) What is the syntax difference between a bulleted list and a numbered list?
+Bulleted lists use the < ul > tag, which stands for “unordered,” whereas < ol > is used to create an ordered list.
+
+Explore Frequency Asked Full Stack Developer Interview Questions
+Frontend Developers Interview Questions
+
+14) How absolute, relative, static, and fixed positions are different from each other?
+
+Static: It is a default position, even if we do not specify any position or value for elements, the system automatically sets the default values,
+ and they are unchange.
+
+Syntax: position:static
+
+Relative: If you want to change the position of the elements, you can use relative. 
+ it changes the position of the elements by using the below attributes. Attributes are as follows
+
+Alignment: In this attribute, you can give the values like top, bottom, right or left according to that element position changes. 
+
+Size: Mention in the pixels.  
+
+Let us consider one example below.  
+
+<html>
+<div id="one"></div>
+<div id="two"></div>
+<style>
+#one{position:absolute;right:100px;}
+#two{position:relative;left:150px;}
+</style>
+<h1 id="two">Two</h1>
+<h1 id="one">One</h1>
+</html>
+Output
+
+One 
+    Two 
+Absolute: User can change the element position, and generally absolute will place relative to the parent. If a parent is not available to the page itself
+ then default it placed as a relative position. 
+
+Syntax:
+
+position:absolute
+Fixed: When scrolling happens viewport doesn’t change. So the position is fixed 
+for the element.
+
+Syntax:
+
+position:fixed
+15) What is meant by a responsive website?
+It creates dynamic changes to the appearance of a website, depending on the screen size and resolution of the device being used to view it.
+
+16) Explain the difference between inline, inline-block, and block?
+Compared to display: inline, the major difference is that inline-block allows to set a width and height on the element. Also, with display: inline, 
+top and bottom margins & paddings are not respected, and with display: inline-block they are.
+
+Now, the difference between display: inline-block and display: block is that, with display: block, a line break happens after the element, 
+so a block element doesn’t sit next to other elements.
+
+Q17) Does HTML need a compiler?
+No, HTML need not have any compiler, because it is a front-end language, whereas Java, C, C+ need a compiler to convert the code into machine understandable
+language. 
+
+18) What is the difference between document and window?
+The window is the first thing that loads into the browser. It has properties like inner width, inner height, length, name. 
+
+The Document gets loaded inside the window object. It is similar to HTML, PHP, and other documents which are loaded into the browser and have properties like 
+title, URL, cookies, etc.
+
+19) What is web accessibility?
+Web accessibility means providing access to the website for differently-abled and disabled persons. So that disabled persons can understand, navigate, and 
+interact with the web easily
+
+20) What is JavaScript hoisting?
+This was a frequently asked UI Developer Interview question. In JavaScript, only assigned variables are
+ hoisted. like a variable can be used before it has been declared.
+ 
+ x = 5; // Assign 5 to x
+
+elem = document.getElementById("demo"); // Find an element
+elem.innerHTML = x;                     // Display x in the element
+
+var x; // Declare x
+
+21) Create An Array In Javascript With A-List Of5 Cities, Assign That Array To The Variable, City?
+var City= [New york, ‘Texas’, ‘Chicago’, ‘Hyderabad’, ‘Montreal’];
+
+22) How Do You Select All Elements With The Class Of “Apple” In Jquery?
+To select all elements with the class of “Apple’ in Jquery is 
+
+23) Declare A New Variable In Php Equal To The Number 6?
+A variable in Php equal to the number 6 is  $number = 6;
+
+24) How Do You Check If A Variable Has been Set In Php?
+To check the variable in PHP use: isset($var);
+
+25) How Do You Access A Get Requests Url Parameter With Php?
+To access a Get Request URL parameter with the Php is  $_GET[“turkey”]
+
+ 26) What is the difference between HTML and XHTML?
+Html is a hypertext markup language where XHTML is an extensible hypertext markup language. Both languages are used to create web pages. 
+XHTML is XML based while HTML is SGML based. Compare to HTML XHTML is strict and does not allow the users to get away with the lapses in coding and structures. 
+
+File extensions of HTML:  .html, .htm
+File extensions of XHTML: .xhtml, .xht, .xml, .html, .htm.
+
+27) What is the difference between local storage, session storage, and cookies?
+Local storage: It allows to store the data without expiry limits.
+Cookies: It allows to store the data within the client-server.
+Session Storage: It stores the data when the window was opened.
+
+28) What can you do to increase page performance?
+To increase the page performance, the following are a few steps.
+
+Reduce image size.
+Clear the cache.
+Reduce the external HTTP requests.
+Load the JavaScript asynchronously
+
+ 
+ Explore UI Developer Sample Resumes Download & Edit, Get Noticed by Top Employers!  
+ 
+29) Describe the new elements to HTML?
+To change some of the features in HTML new elements used, are semantic tags and multimedia and graphics tags. Semantic tags are a figure, header, footer, 
+mark, and multimedia, and graphics tags are audio, canvas.
+
+30) Write about how floats work?
+It pushes the element to the right or left. Float property has four values, and they are inherited, left, right, and none. 
+
+
+
+
+
+
+
+
+which can send and recieve data values from the backend server.. Then we would be using actions,api,reducer and saga funtions for
+  rendering of components which is required for the react application.
+ 
+
+
+TECHNICAL SKILLS
+Front-end: JavaScript, jQuery, HTML5, CSS3, Sass Bootstrap, WordPress, AngularJS
+Back-end: Python, PHP, Java, WordPress plugins
+sOther: Ajax, Git, GitHub, CMS, SQ
+
+Proficient: JavaScript, jQuery, HTML5, CSS3, Sass Bootstrap, WordPress, AngularJ
+Experienced: Python, PHP, Java, WordPress plugins
+Familiar: Ajax, Git, GitHub, CMS, SQL
+
+Essential web development skills – E.g. HTML, Javascript
+ReactJS-specific skills – E.g. JSX
+Library/toolkit experience – E.g. Redux/MobX
+Design skills – Building scalable applications, using the Flux architecture
+Communication skills – Discussing problems and constraints with your clients
+Being a self-starter – If you don‘t want to do any hand-holding
+
+Passionate front-end web developer with 3 years of experience using JavaScript, HTML5, and CSS to build all aspects of the user experience
+and user interface for client-facing landing pages. Specializes in using jQuery and AngularJS to build e-commerce sites.
+ 
+Although, I’m happy with my current job, but I feel now I’m ready for new challenges & assignments. This position really excites me.
+
+
+
+
+==============================================================================================================================
+
+In Microsoft Teams, we can add build-in tab. Tabs can be added to help users easily access and manage the data they need or interact with the most. 
+Owners and members can add more tab by click Add a Tab button in the top of channel, then choose the application we want to use.
+
+React interview:
+
+
+ How to Read URL Parameter Values in React?
+ 
+In order to get query parameters from the URL, we can use URLSearchParams.
+ In simple words, URLSearchParams is a defined interface, implemented by modern browsers, that allows us to work with the query string.
+ 
+//Sample address: http://localhost:3000/?id=55&name=test
+const queryParams = new URLSearchParams(window.location.search);
+const id = queryParams.get('id');
+const name = queryParams.get('name');
+const type = queryParams.get('type');
+console.log(id, name, type); // 55 test null
+
+
+import React, { Component } from 'react';
+
+class App extends Component {
+    state = {
+        stringParam: '',
+        numberParam: 0
+    }
+
+    componentDidMount() {
+        const queryParams = new URLSearchParams(window.location.search);
+        this.setState({
+            stringParam: queryParams.get('string_param') ?? '',
+            numberParam: queryParams.get('number_param') ? parseInt(queryParams.get('number_param')) : 0
+        });
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <div>String parameter: { this.state.stringParam.length > 0 ? this.state.stringParam : 'empty' }</div>
+                <div>Number parameter: { this.state.numberParam }</div>
+            </div>
+        );
+    }
+}
+
+export default App;
+
+Passing data from Child to Parent Component:
+
+For passing the data from the child component to the parent component, we have to create a callback function in the parent component and then pass the 
+callback function to the child component as a prop. This callback function 
+will retrieve the data from the child component. The child component calls the parent callback function using props and passes the data to the parent component.
+
+class Parent extends React.Component{    
+    state = {
+        msg: "",
+    }
+  
+    handleCallback = (childData) =>{
+        this.setState({msg: childData})
+    }
+  
+    render() {
+        const {msg} = this.state;
+        return(
+           <div>
+             <h1> {msg}</h1>
+             <Child parentCallback = {this.handleCallback}/>    
+           </div>
+        );
+    }
+}
+  
+export default Parent;
+
+import React from "react";
+  
+class Child extends React.Component {
+    onTrigger = () => {
+      this.props.parentCallback("Welcome to GFG");
+    };
+  
+    render() {
+      return (
+        <div>
+          <br></br> <br></br>
+          <button onClick={this.onTrigger}>Click me</button>
+        </div>
+      );
+    }
+}
+  
+export default Child;
+
+
+
+
+If we want to pass/call the multiple props methods in a single event handler in ReactJS then there are two ways to make it work.
+
+Method 1: We can make a separate method for the event and call all the props method in that method. 
+
+Method 2: We can create an anonymous function and call all the props method inside the anonymous method.
+
+import React from 'react';
+export default class App extends React.Component {
+  
+  sayHi = () => {
+    alert("Hi from GFG");
+  }
+  sayHello = () => {
+    alert("Hello from GFG");
+  }
+  
+  render() {
+    return (
+      <div style={{ marginLeft: 50 }}>
+        <Child1 m1={this.sayHi} 
+                m2={this.sayHello} >
+        </Child1>
+        <br></br>
+        <Child2 m1={this.sayHi} 
+                m2={this.sayHello}>
+        </Child2>
+      </div>
+    )
+  }
+}
+  
+// Method 1
+class Child1 extends React.Component {
+  
+  seperatemethod = () => {
+    this.props.m1();
+    this.props.m2();
+  }
+  
+  render() {
+    return (
+      <div>
+        <button onClick={this.seperatemethod}>
+          Hello Hi from GFG
+        </button>
+      </div>
+    )
+  }
+}
+  
+// Method 2
+class Child2 extends React.Component {
+  
+  render() {
+    return (
+      <div>
+        <button onClick={() => {
+          this.props.m1();
+          this.props.m2();
+        }}
+        >Hello hi from GFG</button>
+      </div>
+    )
+  }
+}
+What are the differences between call() and put() in redux-saga?
+Both call() and put() are effect creator functions. call() function is used to create effect description, which instructs middleware to call the promise. put() function creates an effect, which instructs middleware to dispatch an action to the store.
+
+Let's take example of how these effects work for fetching particular user data.
+
+function* fetchUserSaga(action) {
+  // `call` function accepts rest arguments, which will be passed to `api.fetchUser` function.
+  // Instructing middleware to call promise, it resolved value will be assigned to `userData` variable
+  const userData = yield call(api.fetchUser, action.userId)
+
+  // Instructing middleware to dispatch corresponding action.
+  yield put({
+    type: 'FETCH_USER_SUCCESS',
+    userData
+  })
+}
