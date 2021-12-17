@@ -1,0 +1,43 @@
+
+ 
+
+RUN MOCKY CHART DATA:
+
+BAR,LINE:
+https://run.mocky.io/v3/81acf492-001f-44a6-a235-576ad0abe9ef
+
+PIE:
+
+https://run.mocky.io/v3/8fa8f982-0004-4b3f-a4e6-5a8bfb981fec
+
+
+
+DATE,MONTH and Year PICKER:
+https://reactdatepicker.com/#example-range-month-picker
+
+filter components:
+
+https://react.semantic-ui.com/modules/dropdown/#types-multiple-search-selection
+
+
+BOOTSTRAP ALIGNMENT PART:
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Alignment 
+
+add a new font of my choice into Visual Studio code?
+
+https://stackoverflow.com/questions/40982845/how-do-i-add-a-new-font-of-my-choice-into-visual-studio-code
+
+
+GIT COMMANDS:
+
+3. git config --global user.name "Aishwarya K"
+4. git config --global user.email "aishwarya.k4@cognizant.com"
+5. git config --global https.proxy https://proxy.cognizant.com:6050
+6.git config --global http.proxy http://proxy.cognizant.com:6050
+10. git config --global http.sslVerify false
+
+color formats:
+https://www.colorhexa.com/ff3d1e
+
+6
