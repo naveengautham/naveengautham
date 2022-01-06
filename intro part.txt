@@ -27,14 +27,14 @@ Hi! I am naveen. I am from chennai and have completed my Bachelor of Engineering
 
 I have been associated with my current company for the last 2.5 years, 
 During my  years  of experience as a developer,i have been working as a front-end developer with 9 months of experience to build all aspects of 
-user experience and user interfaces for client landing pages.Also i have been working as a react developer with 1.9+ years of experience to build 
+user experience and user interfaces for client landing pages.Also i have been working as a react developer with 2+ years of experience to build 
 dashboard sites.
  
 Regarding my project,i have worked in dashboard creation ,were responsible for developing and maintaining our webpage application in react
-Will be creating the dashboard charts and displaying the user story details in components,,by creating components We used Redux to manage the application
- state and for that
+Will be creating the dashboard charts and displaying the user story details by just following the component based architecture in react,,by creating components We used Redux to manage our application
+ state with the help of saga middleware because it will listen our actions from our main application to perform aysynchronous kind of operation and then it will update our application state once it  has been completed so redux will handle it with the help of saga middleware and for that
 we will use the actions,api,reducer,saga and components in react,and combine it into the redux store to run the applications.
-65
+
 And for the ui perspective, before creating the dashboard , we will send the mock data response to the backend team to create,
 once we got the backend dynamic api url, we will integrate it into our ui API call.And finally based on te response we will change the props if it incorrects,
 and will change the series of our chart components,options and state as dynamically.
@@ -42,7 +42,7 @@ and will change the series of our chart components,options and state as dynamica
 we just build the dashboard sites based on client requirements,till now we have developed 4 sites that is DE dashboard ,sfdc dashboard,msd teams and ods team,
 right now we were working in ods dashboard and remaining three dashboards we have buikd and deployed it to the concerned team depends on their 
 requirement like displaying the user stories based on spirint they worked ,how much effort they have spent ,defect total and defect summary details.
-and  in sfdc dashboard we were just showcasing the charts based on filter like storypoints,teamname and iteration list.And each chart components we have an
+and  in sfdc dashboard we were just showcasing the charts based on filter like storypoints,teamname and iteration list.And each chart components we have an  separate api call which we ll get it from our backend team because if one api call  fails  it doesnt affect our whole application thats our motive.so we were creating separte 
 api call ,actions, reducer and saga.
 
 first we write it down the action statement and each action statement have type and payload and action type describes what change we want to make our data and
