@@ -1,1 +1,341 @@
+React  and JS coding samples:
+To add the list and delete:
+import React,{useState} from "react";
+const List =()=>{
+    const[list,setList]=useState([]);
+    const[value,setValue]=useState("");
+
+    const submitHandler=()=>{
+setList([...list,value]);
+setValue("");
+    }
+    const deleteHandler=(item)=>{
+setList(list.filter((elem)=>elem !=item))
+    }
+    return(
+        <div>
+            <h4>Add your grocery list</h4>
+            <p>Enter the List:
+            <input type="text" 
+            placeholder="enter the items"
+            value={value}
+            onChange={(e)=>setValue(e.target.value)}
+            />
+            <button onClick={submitHandler}>Add</button></p> <hr />
+            <ul>
+               <p> {list.map((item)=>{
+                    return <li onClick={()=>deleteHandler(item)}>{item}</li>
+                })}</p>
+            </ul>
+
+        </div>
+    )
+};
+export default List;
+
+
+
+switch toggle:
+const List =()=>{
+  const[toggle,setToggle]=useState(false);
+  return(
+    <div>
+      <h4>Swich toggle</h4>
+      <button onClick={()=>setToggle(!toggle)}> 
+      {toggle ? "ON" : "OFF"}
+      </button>
+    </div>
+  )
+}
+
+Find first value of the element using find():
+
+/* const numArr=[1,20,76,45,32,34,21,30,12];
+const findArr= numArr.find((ele)=>ele > 10);
+console.log(findArr); */ output: 20
+
+const dates = [new Date(2021,10,9),new Date(2020,12,3),new Date(2020,11,3)];
+const matchingDates= dates.find((ele)=>ele.getFullYear()===2020);
+console.log(matchingDates.toString());
+
+find max character I string and return how many times:
+const maxChar=(str)=>{
+let obj={};
+for(let char of str)
+(!obj[char])?obj[char]=1:obj[char]++;
+console.log(obj);
+}; maxChar("helllobsdsss")
+
+o/p:
+•	{
+•	  b: 1,
+•	  d: 1,
+•	  e: 1,
+•	  h: 1,
+•	  l: 3,
+•	  o: 1,
+•	  s: 4
+•	}
+
+
+Fizzbuzz:
+((num)=>{
+for(i=1;i<num;i++){
+if(i%3===0 && i%5===0){
+console.log("fizzbuzz");
+++i;
+}
+if(i%5===0){
+console.log("buzz");
+++i;
+}
+if(i%3===0){
+console.log("fizz")
+++i;
+}
+if(i>num)
+break;
+else {console.log(i)}
+}
+})(16);
+To get Chunked Array:
+const chunks=((arr,n)=>{
+const chunked=[];
+for(let elem of arr){
+let lastChunks=chunked[chunked.length-1];
+if(!lastChunks || lastChunks.length=== n){
+chunked.push([elem]);
+}else{
+lastChunks.push(elem)
+}
+}
+return chunked;
+})([1,2,3,4,5,6,78,0],7)
+console.log({
+chunks
+})
+0/p:
+•	{
+•	  chunks: [[1, 2, 3, 4, 5, 6, 78], [0]]
+•	}
+
+Check the string in unique values:
+const isUnique=(str)=>{
+let obj={};
+for(let i of str){
+(!obj[i])?obj[i]=1:obj[i]++;
+for(let i in obj){
+if(obj[i]>1) return false;
+}
+}
+return true;
+}console.log(isUnique("ggaro"))
+
+isAnagram or permutations:
+const alpha="kunle";
+const beta="eunlkd";
+const isObj=(str)=>{
+let obj={};
+for(let i of str){
+(!obj[i])? obj[i]=1:obj[i]++;
+}
+}
+
+const isPermutation=(str1,str2)=>{
+if(str1 === str2){
+return true;
+}
+else {
+if(str1.length !== str2.length){
+return false;
+}
+else {
+const obj1=isObj(str1);
+const obj2 = isObj(str2);
+for(let i in obj1){
+if(obj1[i] !== obj2[i]){
+return false;
+}
+}
+}
+}
+return true;
+}
+console.log({
+isPermutation:isPermutation(alpha,beta)
+})
+
+Replace the given strings with the whites spaces:
+const urlify=((str,n)=>{
+let newStr="";
+for(var i=0; i<=n;i++){
+if(str[i]=== " "){
+newStr=newStr+"%20"
+}else{
+newStr+=str[i]
+}
+}
+return newStr;
+}
+)
+console.log(urlify("My name is anveen kumar",22));
+o/p:
+"My%20name%20is%20anveen%20kumar"
+
+	
+Implement this code:
+ 
+66
+Answer:
+
+const calc={
+total : 0,
+add(a){
+this.total+=a;
+return this;
+},
+multiply(a){
+this.total*=a;
+return this;
+},
+subtract(a){
+this.total-=a;
+return this;
+}
+}
+
+ 
+Ans:
+function add(a){
+return a+5;
+}
+function sub(a){
+return a-10;
+}
+function multiply(a){
+return a*10;
+}
+const compose = (...values) =>{
+return (args)=>{
+return values.reduceRight((args,fn)=>fn(args),args);
+//reduceRight is a function
+}
+}
+const evaluate= compose(add,sub,multiply);
+console.log(evaluate(8)); //
+
+
+Question: Ways to center a div component? (More common )
+1st method:
+ 
+Or 2nd method to do:
+ 
+How do you implement debounce method:
+import React from "react";
+
+const Debounce = () => {
+  const myDebounce = (fn, d) => {
+    let timer;
+    return function (...args) {
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => {
+        fn(...args);
+      }, d);
+    };
+  };
+
+  const captureTheEvents = myDebounce((e) => {
+    console.log(e.target.value);
+  }, 1000);
+  return (
+    <div>
+      Enter the input:
+      <input onChange={captureTheEvents} />
+    </div>
+  );
+};
+
+export default Debounce;
+
+Output based question:
+obj1={a:100};
+const obj2= obj1;
+obj2.a=20;
+console.log(obj1);//a=20
+console.log(obj2); //a=20
+// but this will get error
+let obj1; // Cannot access 'obj1' before initialization
+
+
+question:
+ 
+Normal method:
+function mul(a){
+return function(b){
+return function(c){
+return a*b*c;
+}
+}
+}; or 2nd method:
+const mul=(a)=>{
+return (b)=>{
+return (c)=>{
+return a*b*c;
+}
+}
+}
+console.log(mul(3)(2)(10)); //o/p:36
+How to get the length of the values in array?
+  let arr=[1,2,1,2,1,3,4,5,6,78,1,2,11,1];
+  var getOne = arr.filter((value)=>{
+  return value == 2;
+  });
+console.log(getOne.length); o/p:3
+
+How html5 differs from html?
+Formatting tags in html?
+Bold and strong tag purpose?
+How sass is better that css?
+Pseudo classes?
+Ecmascript?
+Includes,charAt,indexof,slice,splice methods?important
+Array methods?
+Callback function example:
+function modifiedArray(arr,cb){
+Arr.push(100);
+Cb();
+}
+Var arr=[1,2,3,4,5,6,7]
+modifiedArray(arr,fn(){
+console.log(“array has been modified”,arr)
+});
+How to check this is an integer number:
+Function isNum(num){
+Return num% 1===0;
+}
+Console.log(isNum(1)); //true
+Console.log(iNum(1.2)); //false
+
+Cognizant questions:
+Interview starts. You should have a photo ID ready for your identity proof.
+ Tell me briefly about yourself.
+ How many years experience technology wise? 
+1. Why you go for React js library?
+ 2. What is Virtual DOM? How it works?
+ 3. Explain class based components and their life cycles, where do you used it?
+ 4. Where these methods are used in project?
+5. Hands on time - A) Create a parent(class based component) and child(function based component) , pass props between them. On click of a button change the prop name.
+ B) Routing between components(Route to child component)
+ C) useCallback, useMemo, and other hooks!
+ D) Setup redux(and thunk middleware) in your project and explain, like basic normal skeleton, with each and every step.
+
+
+
+
+
+
+
+
+
+
 
