@@ -27,8 +27,14 @@ Hi! I am naveen. I am from chennai and have completed my Bachelor of Engineering
 
 I have been associated with my current company for the last 2.5 years, 
 During my  years  of experience as a developer,i have been working as a front-end developer with 9 months of experience to build all aspects of 
-user experience and user interfaces for client landing pages.Also i have been working as a react developer with 2+ years of experience to build 
+user experience and user interfaces for client landing pages.
+
+Throughout my experience, I’ve worked with Redux architecture for state management with tools like Redux Toolkit, Thunks, and middleware.currently our projects are focusssed on using React Hooks, Context API, and performance optimization techniques to enhance application efficiency.
+
+Also i have been working as a react developer with 2+ years of experience to build 
 dashboard sites.
+
+
  
 Regarding my project,i have worked in dashboard creation ,were responsible for developing and maintaining our webpage application in react
 Will be creating the dashboard charts and displaying the user story details by just following the component based architecture in react,,by creating components 
