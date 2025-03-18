@@ -31,6 +31,9 @@ user experience and user interfaces for client landing pages.
 
 Throughout my experience, I’ve worked with Redux architecture for state management with tools like Redux Toolkit, Thunks, and middleware.currently our projects are focusssed on using React Hooks, Context API, and performance optimization techniques to enhance application efficiency.
 
+ I also have extensive experience working with Git for version control, collaborating in teams using branching strategies, code reviews, and CI/CD workflows.
+Thisis all about me and I’m excited to discuss how my skills can contribute to your team!"
+
 Also i have been working as a react developer with 2+ years of experience to build 
 dashboard sites.
 
